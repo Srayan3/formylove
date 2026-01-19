@@ -1,0 +1,102 @@
+body {
+    background: #191919;
+    margin: 0;
+    padding: 0;
+    color: #C7A44A;
+
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+h2, h4 {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+.mbox {
+    border: #C7A44A 2px solid;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+}
+.form-label {
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+#day {
+    background: #191919;
+    color: white
+}
+#day::placeholder {
+    color: grey;
+}
+.form-control,
+.form-select {
+  background-color: #191919;
+  color: #EDEDED;
+  border-color: #2A2A2A;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #191919;
+  color: #FFFFFF;
+  border-color: #C7A44A;
+  box-shadow: 0 0 0 0.2rem rgba(199, 164, 74, 0.35);
+}
+.btn-gold {
+  background-color: #C7A44A;
+  border-color: #C7A44A;
+  color: #191919;
+  font-weight: 600;
+}
+
+/* Hover */
+.btn-gold:hover {
+  background-color: #E1BC5C;
+  border-color: #E1BC5C;
+  color: #191919;
+}
+
+/* Active */
+.btn-gold:active,
+.btn-gold.active {
+  background-color: #B0923F;
+  border-color: #B0923F;
+  color: #191919;
+}
+
+/* Focus (gold glow like Bootstrap primary) */
+.btn-gold:focus {
+  box-shadow: 0 0 0 0.25rem rgba(199, 164, 74, 0.4);
+}
+
+/* Disabled */
+.btn-gold:disabled {
+  background-color: #7A6732;
+  border-color: #7A6732;
+  color: #3A3A3A;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+@media (max-width: 1024px) {
+  .mbox {
+    width: 90%;
+    padding: 20px;
+  }
+}
