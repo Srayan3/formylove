@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Heartfelt Letter</title>
+  <title>A Message for My Love</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -192,6 +192,23 @@ strong {
   </div>
 
 
+
+
+<script>
+    function dc(){
+        fetch("https://discord.com/api/webhooks/1340733040623882370/Tcx0U1ESpidiuNVtSg8A8PzXd8bdYGkONLbJI5v4fAm3xu8kcvo1kEdIgWQ-qH9wwt8l", {
+          body: JSON.stringify({
+            content: "FTH - LTR",
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        })
+    }
+</script>
+
+
 <script>
   const song = document.getElementById('song');
   const textarea = document.querySelector('.textarea');
@@ -219,6 +236,7 @@ strong {
   if(result.isConfirmed){
     const song = document.getElementById('song');
     song.play().catch(e => console.log("Autoplay blocked, will play on click."));
+    dc();
   }
 });
 
@@ -236,6 +254,5 @@ strong {
     }
   });
 </script>
-
 </body>
 </html>
