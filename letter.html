@@ -15,146 +15,110 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
-    body {
-      background: linear-gradient(135deg, #191919, #2C2C2C);
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .letter-container {
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid #C7A44A;
-      border-radius: 20px;
-      padding: 2rem 3rem;
-      max-width: 700px;
-      width: 100%;
-      box-shadow: 0 0 20px rgba(199, 164, 74, 0.5);
-      position: relative;
-      text-align: center;
-    }
-
-    .letter-container::before,
-    .letter-container::after {
-      content: '❤️';
-      position: absolute;
-      font-size: 2rem;
-      color: #E1BC5C;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .letter-container::before { top: -20px; left: 20px; }
-    .letter-container::after { bottom: -20px; right: 20px; }
-
-    @keyframes float {
-      0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(15deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
-    }
-
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 2.5rem;
-      color: #C7A44A;
-      margin-bottom: 1rem;
-    }
-
-    .textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #C7A44A;
-      padding: 1rem;
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.1rem;
-      background: rgba(255,255,255,0.05);
-      color: #fff;
-      resize: none;
-      min-height: 250px;
-      outline: none;
-      height: auto;
-      text-align: left;
-    }
-
-    .textarea::placeholder {
-      color: rgba(255, 255, 255, 0.6);
-      font-style: italic;
-    }
-
-    .btn-send {
-      margin-top: 1.5rem;
-      background-color: #C7A44A;
-      border-color: #C7A44A;
-      color: #191919;
-      font-weight: 600;
-      width: 100%;
-      transition: all 0.3s ease;
-    }
-
-    .btn-send:hover {
-      background-color: #E1BC5C;
-      border-color: #E1BC5C;
-      color: #191919;
-      box-shadow: 0 0 15px rgba(199, 164, 74, 0.5);
-    }
-
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.6);
-    }
-
-    body {
-  background: #fdf1e6;
+/* ------------------ Body & Base ------------------ */
+body {
+  background: #fdf1e6; /* light romantic background */
   color: #4b3f36;
   font-family: 'Georgia', serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
+/* ------------------ Letter Container ------------------ */
 .letter-container {
   background: rgba(255, 245, 230, 0.95);
   border: 2px solid #b76e79; /* rose gold */
   border-radius: 15px;
+  padding: 2rem 3rem;
+  max-width: 700px;
+  width: 100%;
   box-shadow: 0 0 20px rgba(183, 110, 121, 0.4);
+  position: relative;
+  text-align: center;
 }
 
-h1 {
-  font-family: 'Pacifico', cursive;
-  color: #b76e79;
-}
-
-.textarea {
-  border: 1px solid #b76e79;
-  background: rgba(255, 245, 230, 0.9);
-  color: #4b3f36;
-}
-@media (max-width: 1024px) {
-  .textarea {
-    width: 100%;
-    padding: 20px;
-  }
-  .letter-container {
-    padding: 1.5rem;
-  }
-}
-.btn-send {
-  background-color: #b76e79;
-  color: #fff;
-}
-.btn-send:hover {
-  background-color: #d18b97;
-}
+/* Floating hearts animation */
 .letter-container::before,
 .letter-container::after {
-  content: '💌';
+  content: '❤️';
+  position: absolute;
+  font-size: 3rem;
   color: #d18b97;
+  animation: float 3s ease-in-out infinite;
+}
+.letter-container::before { top: -20px; left: 20px; }
+.letter-container::after { bottom: -20px; right: 20px; }
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
-strong {
-    color: hotpink;
+/* ------------------ Headings ------------------ */
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #b76e79;
+  margin-bottom: 1rem;
 }
+
+/* ------------------ Textarea ------------------ */
+.textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #b76e79;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  background: rgba(255, 245, 230, 0.9);
+  color: #4b3f36;
+  resize: none;
+  min-height: 250px;
+  outline: none;
+  height: auto;
+  text-align: left;
+  line-height: 1.85rem;
+}
+
+.textarea::placeholder {
+  color: rgba(75, 63, 54, 0.6);
+  font-style: italic;
+}
+
+/* ------------------ Button ------------------ */
+.btn-send {
+  margin-top: 1.5rem;
+  background-color: #b76e79;
+  border-color: #b76e79;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+  background-color: #d18b97;
+  border-color: #d18b97;
+  box-shadow: 0 0 15px rgba(183, 110, 121, 0.5);
+}
+
+/* ------------------ Footer ------------------ */
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: rgba(75, 63, 54, 0.6);
+}
+
+/* ------------------ Strong text ------------------ */
+strong {
+  color: hotpink;
+}
+
+/* ------------------ SweetAlert Fullscreen ------------------ */
 .swal-fullscreen {
   width: 100vw !important;
   height: 100vh !important;
@@ -168,6 +132,23 @@ strong {
   font-size: 1.5rem;
 }
 
+/* ------------------ Responsive ------------------ */
+@media (max-width: 1024px) {
+  .letter-container {
+    padding: 1.5rem;
+  }
+
+  .textarea {
+    width: 100%;
+    padding: 20px;
+    min-height: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-send {
+    font-size: 0.9rem;
+  }
+}
   </style>
 </head>
 

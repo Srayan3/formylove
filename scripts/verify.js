@@ -19,7 +19,7 @@ form.addEventListener('submit', e => {
       timer: 2000,
       showConfirmButton: false,
       willClose: () => {
-        window.location.href = 'next.html?date=27062025';
+        window.location.href = 'letter.html?date=27062025';
       }
     });
   } else {
